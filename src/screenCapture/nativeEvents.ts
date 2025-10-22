@@ -1,10 +1,8 @@
 import {NativeEventEmitter, NativeModules} from 'react-native';
 import {appendLog} from './LogStore';
 
-const {ScreenCaptureModule, ReplayCaptureModule} = NativeModules as any;
-const emitter = new NativeEventEmitter(
-  ScreenCaptureModule || ReplayCaptureModule,
-);
+const {ScreenCaptureModule} = NativeModules as any;
+const emitter = new NativeEventEmitter(ScreenCaptureModule);
 
 export function startNativeEventListener() {
   const sub = emitter.addListener('NativeCaptureEvent', async (ev: any) => {

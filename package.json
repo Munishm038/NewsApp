@@ -10,8 +10,11 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.24.0",
+    "axios": "^1.4.0",
     "react": "18.1.0",
-    "react-native": "0.70.3"
+    "react-native": "0.70.3",
+    "react-native-view-shot": "^3.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
